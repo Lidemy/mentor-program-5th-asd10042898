@@ -12,8 +12,6 @@
 
 ## 假設我今天去 Google 首頁搜尋框打上：JavaScript 並且按下 Enter，請說出從這一刻開始到我看到搜尋結果為止發生在背後的事情。
 
-
-
 1. 瀏覽器向 Operating System 送出 Request。
 
 2. Operating System 向 Hardware 送出 Request。

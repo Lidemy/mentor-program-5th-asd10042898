@@ -1,0 +1,92 @@
+body {
+  		background: rgba(0, 0, 0, 0.3);
+  	}
+
+  	.wrapper {
+  		max-width: 645px;
+  		background: white;
+  		margin: 10% auto;/*可以置中的方式*/
+  		box-shadow: 1.8px 2.4px 5px 0 rgba(0, 0, 0, 0.3);
+  		border-top: solid 8px #fad312;
+  		margin-top: 10%;
+  		padding: 64px 32px;
+  	}
+
+  	.apply-form__title {
+  		margin: 0;
+  		font-size: 36px;
+  		font-weight: bold;
+  		line-height: 1.5em;
+  	}
+
+  	.apply-form__desc {
+  		margin-top: 32px;
+  		font-size: 14px;
+  	}
+
+  	.apply-form__notice {
+  		color: #e74149;
+  		font-size: 16px;
+  		margin-top: 20px;
+  	}
+
+  	.input-block {
+  		margin-top: 55px;
+  	}
+
+  	.input-block__title {
+  		font-size: 20px;
+  	}
+
+  	.input-block__desc {
+  		font-size: 14px;
+  		margin-top: 8px;
+  	}
+
+  	.input-block__input {
+  		margin-top: 20px;
+  	}
+
+  	.input-block__input input[type=text] {
+  		border: solid 1px #d0d0d0;
+  		font-size: 16px;
+  		padding: 8px;/*撐開格子大小*/
+  	}
+
+  	.input-block__input label {
+  		display: block;
+  		margin-top: 12px;
+  	}
+
+  	.input-block__error {
+  		margin-top: 4px;
+  		color: #e74149;
+  		position: absolute;/*這個功能如果沒有設定的話, 他會自動把元素定在原本位置, 可以讓錯誤訊息跑出來時不會造成跑版問題*/
+  	}
+
+  	.required .input-block__title:after {
+  		content: "*";
+  		color: #e74149;
+  	}
+
+  	.apply-form__submit {
+  		background: #fad312;
+  		color: black;
+  		font-size: 15px;
+  		padding: 12px 32px;
+  		margin-top: 48px;
+  		border: none;
+  		border-radius: 4px;
+  	}
+
+  	footer {
+  		background: black;
+  		color: #999999;
+  		font-size: 13px;
+  		text-align: center;
+  		padding: 24px 12px;
+  	}
+
+  	.hide-error .input-block__error {
+  		visibility: hidden;/*使用這種方法會讓原本的字一樣存在, 只是隱藏起來, 避免因為字的更動改變了行高*/
+  	}

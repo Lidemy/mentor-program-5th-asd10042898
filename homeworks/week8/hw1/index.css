@@ -1,0 +1,260 @@
+* {
+	box-sizing: border-box;
+}
+
+.navbar {
+	box-shadow: -1.4px -1.4px 6px 0 #97a2a0;/* 製作四邊的陰影 */
+	padding: 0px 24px;/* 讓這行往內縮的效果, 並可以防止物件在頁面縮小時黏在兩側 */
+}
+
+.navbar .wrapper{
+	display: flex;/* 左右並排 */
+	justify-content: space-between;/* 讓資料左右兩邊推開 */
+	align-items: center;/* 讓物件垂直置中 */
+	height: 84px;
+	background: white;
+}
+
+.navbar__site-name {
+	color: #489846;
+	font-size: 36px;
+}
+
+.navbar__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	font-size: 18px;
+}
+
+.navbar__list li {
+	margin-left: 36px;/* 讓選單間距的距離 */
+	border-radius: 8px;
+	transition: background 0.1s;/* 因為要加漸變效果在 li 上面所以放在這裡 */
+}
+
+.navbar__list li.active, .navbar__list li:hover {
+	background: #ff7286;
+}
+
+.navbar__list li.active a, .navbar__list li:hover a {
+	color: white;
+}
+
+.navbar__list li a {
+	display: block;/* 讓上下左右可以調動 */
+	text-decoration: none;/* 讓字下面的底線消失 */
+	color: black;
+	padding: 12px 24px;/* 為了讓整個圖案可以點所以放在這裡 */
+}
+
+.wrapper {
+	max-width: 1280px;
+	margin: 0 auto;/* 讓最上面自動置中 */
+	padding: 0 15px;
+}
+
+.section-lottery {
+	position: relative;
+	background: url(bg.png) center/cover no-repeat;
+	height: calc(100vh - 300px);/* 這是老師用來設定中間大圖片的, 100vh 指的是看到的視窗畫面大小 - 300px(上面欄位加下面 footer 的高度), 就可以固定住整個畫面的比例 */
+}
+
+.section-lottery.first-prize {
+	background-image: url(flight.JPG);
+}
+
+.section-lottery.second-prize {
+	background-image: url(tv.JPG);
+}
+
+.section-lottery.third-prize {
+	background-image: url(youtube.JPG);
+}
+
+.section-lottery.none-prize {
+	background: black;
+	color: white;
+}
+
+.section-lottery:after {
+	content: '';
+	position: absolute;
+	background: rgba(0, 0, 0, 0.3);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}/* 讓圖片表層有一層微透明顏色覆蓋 */
+
+h2 {
+	margin: 0;
+}
+
+.lottery-result {
+	max-width: 800px;
+	position: relative;
+	color: white;
+	z-index: 2;/* 因為這個對一般元素並沒有作用,所以需要在上面加上 positopn: relative */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.lottery-result__title {
+	margin-bottom: 48px;
+	font-size: 36px;
+}
+
+.lottery-result__btn {
+	max-width: 350px;
+	text-align: center;
+	background: #e62a45;
+	padding: 16px 0px;
+	border-radius: 8px;
+	cursor: pointer;
+	margin: 0 auto;/* 如果一行元素寬度沒有滿, 要置中的話, 就要用這個方式 */
+}
+
+.lottery-info {
+	max-width: 500px;
+	background: white;
+	position: relative;
+	margin: 0;
+	color: white;
+	z-index: 2;/* 因為這個對一般元素並沒有作用,所以需要在上面加上 positopn: relative */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.lottery-info {
+	text-align: center;
+	padding: 40px 40px 24px 20px;
+	border-radius: 16px;
+  	color: black;
+}
+
+.lottery-info__detail {
+	display: flex;/* 兩個元素左右並排 */
+	align-items: flex-start;/* 左右兩個元素往上對齊 */
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	padding-bottom: 12px;
+	margin-bottom: 24px;
+	font-size: 16px;
+}
+
+.lottery-info__detail-title {
+	font-weight: bold;
+	font-size: 18px;
+	width: 90px;
+}
+
+.lottery-info__detail-content {
+	margin-left: 12px;
+	flex: 1;/* 把剩下空間給他避免他佔了前面 title 的空間 */
+	text-align: left;
+	line-height: 1.5em;
+}
+
+.lottery-info__title {
+	font-size: 24px;
+	font-weight: bold;
+	color: #5ec1b6;
+	margin-bottom: 24px;
+}
+
+.lottery-info__btn {
+	margin-top: 24px;
+	width: 80%;
+	text-align: center;
+	background: #e62a45;
+	padding: 16px 0px;
+	border-radius: 8px;
+	cursor: pointer;
+	margin: 0 auto;/* 如果一行元素寬度沒有滿, 要置中的話, 就要用這個方式 */
+}
+
+.section {
+	text-align: center;
+}
+
+.footer__buttom {
+	background: #35564b;
+	padding: 12px;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+}
+
+.footer__top {
+	background: #e8efee;
+	padding: 32px;
+	color: #484848;
+}
+
+.footer__top .wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__info {
+	margin-right: 16px;
+}
+
+.footer__info div + div {/* 代表在第一個 div 之後的 div 都要加上效果 */
+	margin-top: 10px;
+}
+
+.footer__site {
+	font-size: 36px;
+	color: #489846;
+}
+
+.hide {
+	display: none;
+}	
+
+
+@media(max-width: 768px) {
+	.navbar .wrapper {
+		height: 120px;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0px;
+	}
+
+	.navbar__site-name {
+		margin-top: 10px;
+	}
+
+	.navbar__list {
+		display: flex;
+		width: 100%;/* 讓下面四個選單可以平均佔滿全部空間 */
+	}
+	
+	.navbar__list li {
+		flex: 1;
+		margin-left: 0;
+		border-radius: 0;
+		text-align: center;
+	}
+
+	.footer__top .wrapper {
+		flex-direction: column-reverse;/* 在畫面縮小時, 變上下並排跟順序顛倒 */
+	}
+
+	.footer__info {
+		margin-right: 0px;
+		margin-top: 16px;
+	}
+
+	.lottery-info {
+		transform: none;
+		top: 0px;
+		left: 0;
+		border-radius: 0;
+	}
+}/* 可以讓畫面寬度在小於768px時改變成其他狀況 */

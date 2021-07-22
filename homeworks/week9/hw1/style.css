@@ -1,0 +1,105 @@
+body {
+	background: #F0F0F0;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.error {
+	color: rgba(240, 128, 128, 1.0);
+}
+
+.warning {
+	background: rgba(240, 128, 128, 1.0);
+	color: rgb(139, 0, 0);
+	text-align: center;
+	padding: 10px;
+}
+
+.board {
+	background: white;
+	width: 100%;
+	max-width: 750px;
+	margin: 20px auto;
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px #e8e8e8;
+	padding: 20px 20px;
+}
+
+.board_btn {
+	padding: 15px 25px;
+	border: 1px solid rgba(32, 178, 170, 0.7);
+	display: inline-block;/* 沒加的話, 形成的 padding 會超出 board */
+	border-radius: 5px;
+	margin: ;
+	color: rgb(128, 128, 0);
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.board_line {
+	height: 2px;
+	margin: 20px auto;
+	background: rgb(192, 192, 192);
+}
+
+.borad__nickname {
+	margin-top: 10px;
+}
+
+.borad__nickname input {
+	border: 1px solid #c2dffb;
+	padding: 5px;
+}
+
+.board__new-comment-form textarea {
+	border: 1px solid rgba(32, 178, 170, 0.7);
+	width: 100%;
+	padding: 10px;
+}
+
+.board_submit-btn {
+	padding: 15px 25px;
+	border: 1px solid rgba(32, 178, 170, 0.7);
+	border-radius: 5px;
+	color: rgb(128, 128, 0);
+	font-size: 16px;
+	background: white;
+	margin-top: 15px;
+}
+
+.comments {
+	display: flex;/* 讓圖像跟留言內容左右並排 */
+	min-height: 70px;
+	margin: 20px 0;
+}
+
+.comments__avatar {
+	background: rgba(128, 128, 128, 0.7);
+	height: 50px;
+	width: 50px;
+	min-width: 50px;/* 防止圓圈被壓縮變形 */
+	border-radius: 50%;
+}
+
+.comments__body {
+	margin-left: 10px;
+}
+
+.comments__time {
+	color: black;
+	font-weight: bold;
+}
+
+.comments__author {
+	color: rgba(72, 209, 204, 0.7);
+	font-weight: bold;
+}
+
+.comments__content {
+	max-width: 100%;
+	word-break: break-all;/* 防止字超出我們的範圍 */
+	white-space: pre-line;/* 可以讓留言換行, 主要是對於空格的處理 */
+}
